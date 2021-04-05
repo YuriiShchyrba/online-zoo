@@ -14,17 +14,17 @@
         <div class="wrapper header__wrapper">
             <h1 class="header__title">Online Zoo</h1>
             <div class="logo">
-                <a href="www.google.com">
+                <a href="https://yuriishchyrba.github.io/online-zoo/">
                     <span class="logo__title"></span>
                 </a>
             </div>
             <nav class="menu">
                 <ul class="menu__list ul">
-                    <li class="list__item li"><a href="" class="link">About</a></li>
+                    <li class="list__item li"><a href="https://yuriishchyrba.github.io/online-zoo/" class="link">About</a></li>
                     <li class="list__item li"><a href="" class="link">Zoos</a></li>
-                    <li class="list__item li"><a href="" class="link">Map</a></li>
-                    <li class="list__item li"><a href="" class="link">Contact us</a></li>
-                    <li class="list__item li"><a href="" class="link">Design</a></li>
+                    <li class="list__item li"><a href="" class="link link_active">Map</a></li>
+                    <li class="list__item li"><a href="#contact-us" class="link">Contact us</a></li>
+                    <li class="list__item li"><a href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp" class="link">Design</a></li>
                 </ul>
             </nav>
             <div class="switch__wrapper">
@@ -47,10 +47,10 @@
                 </div>
                 <div class="social">
                     <ul class="social__links">
-                        <li class="links__link li"><a href="" class="instagram link"></a></li>
-                        <li class="links__link li"><a href="" class="twitter link"></a></li>
-                        <li class="links__link li"><a href="" class="youtube link"></a></li>
-                        <li class="links__link li"><a href="" class="vk link"></a></li>
+                        <li class="links__link li"><a href="https://www.instagram.com/" class="instagram link"></a></li>
+                        <li class="links__link li"><a href="https://twitter.com/" class="twitter link"></a></li>
+                        <li class="links__link li"><a href="https://www.youtube.com/" class="youtube link"></a></li>
+                        <li class="links__link li"><a href="https://vk.com/" class="vk link"></a></li>
                     </ul>
                 </div>
             </div>
@@ -62,11 +62,20 @@
                     <div class="gallery__item item_2">
                         <img alt="" src="assets/images/gallery_2.png">
                         <p class="gallery__info">Panda’s name is Bei Bei. He is 2 years old. Bei Bei is from China. He loves bamboos.</p>
-                        <button class="btn btn__gallery">
-                            <span class="btn-watch__icon"></span>
-                            <p class="btn-watch__text">watch online</p>
-                        </button>
-                        <button></button>
+                        <div class="btn__gallery_wrapper">
+                            <button class="btn_small btn__gallery">
+                                <span class="btn-watch__icon_ellipse">
+                                    <span class="btn-watch__icon_pollygon"></span>
+                                </span>
+                                <p class="btn-watch__text_small">watch online</p>
+                            </button>
+                            <button class="btn_small btn__gallery btn_second">
+                                <span class="btn-watch__icon_ellipse2">
+                                    <span class="btn-watch__icon_dollar"></span>
+                                </span>
+                                <p class="btn-watch__text">Donate</p>
+                            </button>
+                        </div>
                     </div>
                     <div class="gallery__item item_3">
                         <img alt="" src="assets/images/gallery_3.png">
@@ -100,7 +109,7 @@
                         <span></span>
                     </label>
                 </div>
-                <div class="">
+                <div class="works__btn_wrapper">
                     <button class="btn btn-watch">
                         <span class="btn-watch__icon"></span>
                         <p class="btn-watch__text">watch online</p>
@@ -139,10 +148,22 @@
                 </div>
                 <div class="container">
                     <div class="pets__item">
-                        <img src="assets/images/gallery_2.png" alt="">
-                        <p>Panda’s name is Bei Bei. He is 2 years old. Bei Bei is from China. He loves bamboos.</p>
-                        <button></button>
-                        <button></button>
+                        <img alt="" src="assets/images/gallery_2.png">
+                        <p class="gallery__info">Panda’s name is Bei Bei. He is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                        <div class="btn__gallery_wrapper">
+                            <button class="btn_small btn__gallery">
+                                <span class="btn-watch__icon_ellipse">
+                                    <span class="btn-watch__icon_pollygon"></span>
+                                </span>
+                                <p class="btn-watch__text_small">watch online</p>
+                            </button>
+                            <button class="btn_small btn__gallery btn_second">
+                                <span class="btn-watch__icon_ellipse2">
+                                    <span class="btn-watch__icon_dollar"></span>
+                                </span>
+                                <p class="btn-watch__text">Donate</p>
+                            </button>
+                        </div>
                     </div>
                     <div class="pets__item">
                         <img src="assets/images/pets_2.png" alt="">
@@ -154,7 +175,7 @@
                         <img src="assets/images/pets_4.png" alt="">
                     </div>
                 </div>
-                <div class="pets__arrows">
+                <div class="pets__arrows arrows">
                     <span class="arrow arrow_right"></span>
                 </div>
             </div>
@@ -162,7 +183,9 @@
                 <input type="text">
                 <span></span>
             </label>
-            <button class="btn">Choose your favorite</button>
+            <div class="pets__btn_wrapper">
+                <button class="btn"><a href="#map" class="btn link">Choose your favorite</a></button>
+            </div>
         </div>
     </section>
     <section class="feed">
@@ -199,7 +222,9 @@
                     <span class="arrow arrow_left"></span>
                 </div>
                 <div class="testimonials__item">
-                    <span class="person1"></span>
+                    <span class="person1">
+                        <img alt="" src="assets/images/user 1.png" class="person1_img">
+                    </span>
                     <h5 class="item__title">Nastya Sidorova</h5>
                     <p class="item__info">As a voice for wildlife, we are devastated by the impact of the 2020 Australian bushfires on precious species and their habitat.</p>
                 </div>
@@ -223,59 +248,75 @@
     </section>
     <section class="map">
         <div class="wrapper map__wrapper">
+            <a name='map'></a>
             <h3 class="map__title title">Map</h3>
             <div></div>
-            <button class="btn btn-watch">
-                <span class="btn-watch__icon"></span>
-                <p class="btn-watch__text">watch online</p>
-            </button>
+            <div class="map__btn_wrapper">
+                <button class="btn btn-watch">
+                    <span class="btn-watch__icon"></span>
+                    <p class="btn-watch__text">watch online</p>
+                </button>
+            </div>
         </div>
     </section>
     <footer class="footer">
         <div class="wrapper footer__wrapper">
+            <a name='contact-us'></a>
             <div class="footer__top">
                 <div class="logo">
-                    <span class="footer__title"></span>
+                    <a href="https://yuriishchyrba.github.io/online-zoo/">
+                        <span class="footer__title"></span>
+                    </a>
                 </div>
                 <ul class="footer__menu ul">
-                    <li class="menu__item li"><a href="" class="link">About</a></li>
+                    <li class="menu__item li"><a href="https://yuriishchyrba.github.io/online-zoo/" class="link">About</a></li>
                     <li class="menu__item li"><a href="" class="link">Zoos</a></li>
                     <li class="menu__item li"><a href="" class="link">Map</a></li>
-                    <li class="menu__item li"><a href="" class="link">Design</a></li>
+                    <li class="menu__item li"><a href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp" class="link">Design</a></li>
                 </ul>
-                <button class="btn">Donate for Volunteers</button>
+                <div class="top__btn_wrapper">
+                    <button class="btn btn__top">Donate for Volunteers</button>
+                </div>
             </div>
             <div class="contact">
-                <div class="contact__your-info">
-                    <h4>Contact us</h4>
+                <div class="contact__your-info contact__wrapper">
+                    <h4 class="contact__your-title">Contact us</h4>
                     <form class="form">
-                        <input type="text" value="Name">
-                        <input type="email" value="Email">
-                        <label for=""></label>
-                        <textarea></textarea>
-                        <input>
-                        <label></label>
-                        <button>Send
-                            <span></span>
-                        </button>
+                        <input type="text" value="Name" class="form__input name" required>
+                        <input type="email" value="Email" class="form__input email" required>
+                        <fieldset class="fieldset">
+                            <legend class="legend">Please enter your mesage</legend>
+                                <textarea maxlength="280" class="form__textarea" required></textarea>
+                        </fieldset>
+                        <div class="check__wrapper">
+                            <input type="checkbox" id="check" class="form__input check" required>
+                            <label for="check" class="check_label">I agree to the processing of Personal Data</label>
+                        </div>
+                        <div class="form__btn_wrapper">
+                            <button type="submit" class="btn_submit">Send
+                                <span class="form__btn_arrow"></span>
+                            </button>
+                        </div>
                     </form>
                 </div>
-                <div class="contact__our-info">
-                    <h5>ZOO Online Centre</h5>
-                    <address>
-                        132, Address District, Street<br>Open Daily 10:00 am - 5:00 pm<br>
-                        <a>T(702) 163-3433</a>
+                <div class="contact__our-info contact__wrapper">
+                    <h5 class="contact__our-title">ZOO Online Centre</h5>
+                    <address class="contact__address">
+                        132, Address District, Street<br>Open Daily 10:00 am - 5:00 pm<br><br>
+                        <a >T(702) 163-3433</a><br>
                         <a>zoo.online@gmail.com</a>
                     </address>
                     <ul class="social__links ul">
                         <li class="links__link li"><a href="" class="instagram link"></a></li>
                         <li class="links__link li"><a href="" class="twitter link"></a></li>
-                        <li class="links__link li"><a href="" class="youtube link"></a></li>
                         <li class="links__link li"><a href="" class="vk link"></a></li>
+                        <li class="links__link li"><a href="" class="youtube link"></a></li>
                     </ul>
                 </div>
             </div>
-            <img>
+            <div class="footer__line">
+                <img src="assets/images/line_footer.png" alt="">
+            </div>
             <div class="copyright">
                 <p>&copy;Noora Sagnayeva</p>
                 <p>&copy;RSSchool and ©Yem Digital - 2021</p>
