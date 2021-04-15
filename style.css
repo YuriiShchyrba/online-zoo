@@ -43,6 +43,10 @@ body {
   padding: 0 0 0 9px;
 }
 
+.btn-link {
+  text-decoration: none;
+}
+
 .info {
   font: 400 14px/16.41px Roboto;
   color: #4f4f4f;
@@ -1016,6 +1020,11 @@ Favourite
   padding: 38px 0 0 0;
 }
 
+.contact-link {
+  color: #fefefe;
+  text-decoration: none;
+}
+
 .footer .social__list {
   display: flex;
   flex-direction: row;
@@ -1210,6 +1219,11 @@ Favourite
   align-items: center;
   justify-content: space-between;
   width: 1057px;
+}
+
+.intermediate__item:hover {
+  transform: rotate(5deg);
+  transition: 1s;
 }
 
 .intermediate__range {
