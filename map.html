@@ -7,10 +7,8 @@
     <title>Online Zoo</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
   </head>
   <body>
     <header class="header">
@@ -49,6 +47,7 @@
             <input type="checkbox" />
             <span class="slider round"></span>
           </label>
+          <span class="burger"></span>
         </div>
       </div>
     </header>
@@ -101,7 +100,7 @@
                 </li>
                 <li class="intermediate__item">
                   <a href="" class="intermediate__link"
-                    ><img src="assets/images/intermediate-eagle.png" alt=""
+                    ><img src="assets/images/intermediate-elephant.png" alt=""
                   /></a>
                 </li>
                 <li class="intermediate__item">
@@ -135,6 +134,7 @@
             />
           </div>
           <div class="map__content">
+            <img src="" alt="" class="map__map" />
             <div class="animal animal_eagle">
               <span class="pin">
                 <img src="assets/images/map-eagle.png" alt="" />
@@ -151,7 +151,7 @@
               </span>
             </div>
             <div class="animal animal_panda">
-              <span class="pin">
+              <span class="pin pin_active">
                 <img src="assets/images/map-panda.png" alt="" />
               </span>
             </div>
@@ -167,115 +167,117 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
-      <div class="wrapper footer__wrapper">
-        <a name="contact-us"></a>
-        <div class="footer__top">
-          <div class="logo">
-            <a href="index.html">
-              <span class="footer__title"></span>
-            </a>
-          </div>
-          <ul class="footer-menu ul">
-            <li class="footer-menu__item li">
-              <a href="index.html" class="link">About</a>
-            </li>
-            <li class="footer-menu__item li">
-              <a href="live-broadcast_panda.html" class="link">Zoos</a>
-            </li>
-            <li class="footer-menu__item li">
-              <a href="map.html" class="link">Map</a>
-            </li>
-            <li class="footer-menu__item li">
-              <a
-                href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp"
-                class="link"
-                >Design</a
-              >
-            </li>
-          </ul>
-          <div class="top-btn__wrapper">
-            <button class="btn btn__top">Donate for Volunteers</button>
-          </div>
-        </div>
-        <div class="contact">
-          <div class="your-info contact__wrapper">
-            <h4 class="contact__your-title">Contact us</h4>
-            <form class="form">
-              <input
-                type="text"
-                value="Name"
-                class="form__input name"
-                required
-              />
-              <input
-                type="email"
-                value="Email"
-                class="form__input email"
-                required
-              />
-              <fieldset class="fieldset">
-                <legend class="legend">Please enter your mesage</legend>
-                <textarea
-                  maxlength="280"
-                  class="form__textarea"
-                  required
-                ></textarea>
-              </fieldset>
-              <div class="check__wrapper">
-                <input
-                  type="checkbox"
-                  id="check"
-                  class="form__input check"
-                  required
-                />
-                <label for="check" class="check_label"
-                  >I agree to the processing of Personal Data</label
-                >
-              </div>
-              <div class="form__btn_wrapper">
-                <button type="submit" class="btn_submit">
-                  Send
-                  <span class="form__btn_arrow"></span>
-                </button>
-              </div>
-            </form>
-          </div>
-          <div class="our-info contact__wrapper">
-            <h5 class="contact__our-title">ZOO Online Centre</h5>
-            <address class="contact__address">
-              132, Address District, Street<br />Open Daily 10:00 am - 5:00
-              pm<br /><br />
-              <a href="tel:702-163-3433" class="contact-link">T(702) 163-3433</a
-              ><br />
-              <a href="mailto:zoo.online@gmail.com" class="contact-link"
-                >zoo.online@gmail.com</a
-              >
-            </address>
-            <ul class="social__list ul">
-              <li class="social__link li">
-                <a href="https://www.instagram.com/" class="instagram link"></a>
-              </li>
-              <li class="social__link li">
-                <a href="https://twitter.com/" class="twitter link"></a>
-              </li>
-              <li class="social__link li">
-                <a href="https://vk.com/" class="vk link"></a>
-              </li>
-              <li class="social__link li">
-                <a href="https://www.youtube.com/" class="youtube link"></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer__line">
-          <img src="assets/images/line_footer.png " alt="" />
-        </div>
-        <div class="copyright">
-          <p>&copy;Noora Sagnayeva</p>
-          <p>&copy;RSSchool and ©Yem Digital - 2021</p>
-        </div>
+  </main>
+</main>
+<footer class="footer">
+  <div class="wrapper footer__wrapper">
+    <a name="contact-us"></a>
+    <div class="footer__content">
+      <div class="footer-block1__logo">
+        <a href="index.html">
+          <span class="footer__title"></span>
+        </a>
       </div>
-    </footer>
+      <div class="footer-block2__menu">
+        <ul class="footer-menu ul">
+          <li class="footer-menu__item li">
+            <a href="index.html" class="link">About</a>
+          </li>
+          <li class="footer-menu__item li">
+            <a href="live-broadcast_panda.html" class="link">Zoos</a>
+          </li>
+          <li class="footer-menu__item li">
+            <a href="map.html" class="link">Map</a>
+          </li>
+          <li class="footer-menu__item li">
+            <a
+              href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp"
+              class="link"
+              >Design</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="footer-block3__btn">
+        <button class="btn btn__top">Donate for Volunteers</button>
+      </div>
+      <div class="footer-block4__contact">
+        <h4 class="contact__your-title">Contact us</h4>
+        <form class="form">
+          <input
+            type="text"
+            value="Name"
+            class="form__input name"
+            required
+          />
+          <input
+            type="email"
+            value="Email"
+            class="form__input email"
+            required
+          />
+          <fieldset class="fieldset">
+            <legend class="legend">Please enter your mesage</legend>
+            <textarea
+              maxlength="280"
+              class="form__textarea"
+              required
+            ></textarea>
+          </fieldset>
+          <div class="check__wrapper">
+            <input
+              type="checkbox"
+              id="check"
+              class="form__input check"
+              required
+            />
+            <label for="check" class="check_label"
+              >I agree to the processing of Personal Data</label
+            >
+          </div>
+          <div class="form__btn_wrapper">
+            <button type="submit" class="btn_submit">
+              Send
+              <span class="form__btn_arrow"></span>
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="footer-block5__info">
+        <h5 class="contact__our-title">ZOO Online Centre</h5>
+        <address class="contact__address">
+          132, Address District, Street<br />Open Daily 10:00 am - 5:00
+          pm<br /><br />
+          <a href="tel:702-163-3433" class="contact-link">T(702) 163-3433</a
+          ><br />
+          <a href="mailto:zoo.online@gmail.com" class="contact-link"
+            >zoo.online@gmail.com</a
+          >
+        </address>
+        <ul class="social__list ul">
+          <li class="social__link li">
+            <a href="https://www.instagram.com/" class="instagram link"></a>
+          </li>
+          <li class="social__link li">
+            <a href="https://twitter.com/" class="twitter link"></a>
+          </li>
+          <li class="social__link li">
+            <a href="https://vk.com/" class="vk link"></a>
+          </li>
+          <li class="social__link li">
+            <a href="https://www.youtube.com/" class="youtube link"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__line">
+      <img src="assets/images/line_footer.png " alt="" />
+    </div>
+    <div class="copyright">
+      <p>&copy;Noora Sagnayeva</p>
+      <p>&copy;RSSchool and ©Yem Digital - 2021</p>
+    </div>
+  </div>
+</footer>
   </body>
 </html>

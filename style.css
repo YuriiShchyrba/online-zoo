@@ -1079,8 +1079,9 @@ Favourite
 
 .main {
   position: relative;
-  height: 911px;
-  background-color: #f2f2f2;
+  height: 100%;
+  padding-bottom: 312px;
+  box-shadow: inset 2px 15px 15px -15px rgb(0 0 0 / 10%);
 }
 
 .side-bar {
@@ -1126,11 +1127,11 @@ Favourite
   position: absolute;
   top: 0;
   left: 200px;
-  width: 100%;
+  width: 88%;
 }
 
 .zoo__wrapper {
-  width: 83%;
+  width: 81%;
   display: flex;
   flex-direction: column;
 }
@@ -1138,6 +1139,7 @@ Favourite
 .zoo__title {
   padding-top: 60px;
   padding-bottom: 40px;
+  width: 75%;
 }
 
 .zoo__content {
@@ -1151,7 +1153,7 @@ Favourite
 }
 
 .video__main {
-  width: 790px;
+  width: 100%;
   height: 450px;
 }
 
@@ -1164,7 +1166,7 @@ Favourite
 
 .video__small {
   height: 143px;
-  width: 245px;
+  width: 30%;
 }
 
 .videos__btns {
@@ -1192,7 +1194,7 @@ Favourite
 }
 
 .animal-description {
-  width: 407px;
+  width: 48%;
   padding-left: 30px;
 }
 
@@ -1208,7 +1210,7 @@ Favourite
   color: #4f4f4f;
 }
 .animal-description__btn {
-  padding-top: 26px;
+  padding-top: 46px;
 }
 
 .animal-description__btn .btn {
@@ -1218,7 +1220,7 @@ Favourite
 /* Map */
 
 .intermediate {
-  background-color: #f2f2f2;
+  box-shadow: inset 2px 15px 15px -15px rgb(0 0 0 / 10%);
 }
 
 .intermediate__wrapper {
@@ -1269,6 +1271,10 @@ Favourite
 
 .intermediate-btn__wrapper {
   padding-top: 121px;
+}
+
+.intermediate .animal_panda .pin{
+  background-image: url(assets/icons/pin-active.svg);
 }
 
 
@@ -1567,6 +1573,175 @@ Favourite
 }
 
 
+/* Intermediate */
+
+.intermediate__wrapper {
+  padding-bottom: 99px;
+}
+
+
+.intermediate__title {
+  padding-left: 0px;
+}
+
+.intermediate__info{
+  width: 78%;
+}
+
+.intermediate__container {
+  width: 78%;
+}
+
+.intermediate__menu{
+  width: 100%;
+}
+
+.intermediate__link img{
+  width: 100%;
+}
+
+.intermediate__item{
+  padding-right:2px ;
+}
+
+.intermediate__menu .intermediate__item:nth-child(3){
+  margin: 0px 21px 0 0;
+}
+
+.intermediate__menu .intermediate__item:nth-child(4){
+  margin: 0 23px 0px 0px;
+}
+
+.intermediate__menu .intermediate__item:nth-child(n+6){
+  display: none;
+}
+
+.intermediate__container {
+  width: 78%;
+  padding: 39px 0 0 0;
+}
+
+.intermediate .pin{
+  background-image: url(assets/icons/inter-pin1200.svg);
+  width: 58.78px;
+  height: 83.1px;
+}
+
+.intermediate .pin_active{
+  background-image: url(assets/icons/inter-pin-active1200.svg);
+  width: 67px;
+  height: 94px;
+}
+
+.intermediate__animals{
+  width: 83%;
+}
+
+.intermediate__range {
+  padding-top: 22px;
+}
+
+.intermediate .map__content{
+  width: 79%;
+  top: 23px;
+}
+
+.intermediate .animal_eagle {
+  top: 16.5%;
+  left: 9.5%;
+}
+
+.intermediate .animal_alligator {
+  top: 19%;
+  left: 20%;
+}
+
+.intermediate .animal_gorilla {
+  top: 37%;
+  left: 47%;
+}
+
+.intermediate .animal_panda {
+  left: 72.5%;
+  top: 18.5%;
+}
+
+.intermediate-btn__wrapper {
+  padding-top: 34px;
+}
+
+/* Broadcast */
+
+.main {
+  padding-bottom: 15.7%;
+}
+
+
+.side-bar {
+  width: 13%;
+}
+
+.side-bar__wrapper {
+  height: 526px;
+}
+
+.side-bar__menu .side-bar__item_active{
+  width: 88%;
+  margin-bottom: 21px;
+}
+
+.side-bar__menu .side-bar__item_active img{
+  margin-left: 5px;
+}
+
+.side-bar__menu {
+  height: 434px;
+}
+
+.side-bar__item img{
+  width: 88%;
+}
+
+.zoo__wrapper{
+  max-width: 100% !important;
+  width: 100%;
+}
+
+.videos {
+  width: 50%;
+}
+.video__main {
+  height: 298px;
+}
+
+.video__small {
+  height: 101px;
+}
+
+.videos__btns {
+  padding-top: 30px;
+  margin-left: -21px;
+}
+
+.animal-description {
+  width: 26%;
+  padding-left: 18px;
+  margin-top: -8px;
+}
+
+.animal-description__title{
+  line-height: 38px;
+  padding-bottom: 7px;
+}
+
+.animal-description__btn {
+  padding-top: 11px;
+}
+
+.animal-description__btn .btn {
+  width: 72%;
+}
+
 }
 
 @media only screen and (max-width: 640px){
@@ -1831,5 +2006,631 @@ Favourite
 .copyright {
   padding: 31px 0 0 21px;
 }
+
+
+/* Intermediate */
+
+.intermediate__info {
+  width: 94%;
+}
+
+.intermediate__container {
+  width: 92%;
+  padding: 39px 0 0 0;
+}
+
+.intermediate__animals {
+  width: 88%;
+}
+
+.intermediate__menu .intermediate__item:nth-child(n+5){
+  display: none;
+}
+.intermediate__menu .intermediate__item:nth-child(3){
+  margin: 0;
+}
+
+.intermediate__menu .intermediate__item:nth-child(4){
+  margin: 0 ;
+}
+
+.intermediate .map__content {
+  height: 353px;
+  width: 93%;
+  top: 0px;
+}
+
+.intermediate .animal_eagle {
+  top: 12.5%;
+  left: 9%;
+}
+
+.intermediate .animal_alligator {
+  top: 15%;
+  left: 17.5%;
+}
+
+.intermediate .animal_gorilla {
+  top: 30%;
+  left: 45.5%;
+}
+
+.intermediate .animal_panda {
+  left: 71.5%;
+  top: 12.5%;
+}
+
+.intermediate-btn__wrapper {
+  padding-top: 5px;
+}
+
+.intermediate__wrapper {
+  padding-bottom: 79px;
+}
+
+/* Broadcast */
+
+.main {
+  padding-bottom: 563px;
+}
+
+.side-bar {
+  width: 16%;
+}
+
+.side-bar__wrapper {
+  height: 419px;
+}
+
+.side-bar__menu {
+  height: 331px;
+}
+
+.side-bar__item_active img {
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+.side-bar__item_active{
+  margin: 0 0 15px 0 !important;
+}
+
+.side-bar__item{
+  margin: 0 0 0 18px;
+}
+
+.side-bar__item img {
+  width: 81%;
+}
+
+.zoo {
+  left: 19%;
+}
+
+.zoo__title {
+  padding-top: 57px;
+  padding-bottom: 37px;
+  padding-left: 11px;
+}
+
+.zoo__content {
+  flex-direction: column;
+}
+
+.videos {
+  width: 89%;
+}
+
+.video__main {
+  height: 283px;
+}
+
+.videos__small {
+  padding-top: 12px;
+}
+
+.video__small {
+  height: 92px;
+  width: 32%;
+}
+
+.videos__btns {
+  padding-top: 28px;
+  margin-left: 0px;
+}
+
+.animal-description {
+  width: 77%;
+  margin: 0;
+  padding: 40px 0 0 0;
+}
+
+.animal-description__btn {
+  padding-top: 2px;
+}
+
+.animal-description__btn .btn {
+  width: 43%;
+}
+
+}
+
+@media only screen and (max-width: 320px){
+
+  body {
+    max-width: 320px;
+    margin: auto;
+  }
+
+  .title {
+    font: 900 36px/42.19px Roboto;
+  }
+
+  /* Header */
+
+  .header__wrapper {
+    padding-bottom: 17px;
+}
+
+  .logo {
+    padding: 25px 0 0 7px;
+}
+
+.switch__wrapper {
+  padding-right: 12px;
+}
+
+.burger {
+  padding-left: 23px;
+}
+
+/* Favourite */
+
+/* Work */
+
+.works__wrapper {
+  padding-bottom: 48px;
+}
+
+.works__content{
+  padding-top: 50px;
+}
+
+.works__info {
+  padding-top: 21px;
+}
+
+.works__img{
+  content: url(assets/images/works320.png);
+  padding-bottom: 19px;
+}
+
+.works__range{
+  padding-left: 7px;
+}
+
+.works-btn__wrapper {
+  padding-top: 19px;
+  width: 79%;
+}
+
+/* Inspiring */
+
+.inspiring__wrapper {
+  padding-bottom: 24px;
+}
+
+.inspiring-container {
+  padding: 50px 0 0 0px;
+  width: 100%;
+}
+
+.inspiring-container__item {
+  padding-bottom: 27px;
+  width: 100%;
+}
+
+.inspiring-container__info {
+  width: 100%;
+  padding-left: 11px;
+}
+
+/* Pets */
+
+/* Feed */
+
+.feed__wrapper {
+  padding-bottom: 50px;
+}
+
+.feed__title {
+  padding-top: 50px;
+}
+
+.feed__info {
+  display: none;
+}
+
+.feed-container {
+  padding-top: 30px;
+  height: 972px;
+}
+
+.feed-btn__wrapper {
+  padding-top: 33px;
+}
+
+/* Testemonials */
+
+.testimonials__title {
+  padding: 50px 0 0;
+}
+
+.person-1{
+  display: flex;
+}
+
+.person-2{
+  display: none;
+}
+
+.testimonials-container {
+  padding: 36px 0 41px 0px;
+}
+
+.testimonials-container__item {
+  height: 362px;
+  padding-top: 50px;
+}
+
+.testimonials-container__title {
+  font: 900 16px/18.75px Roboto;
+  padding-top: 49px;
+}
+
+.testimonials-container__info {
+  width: 94%;
+}
+
+.testimonials-btn__wrapper {
+  padding: 17px 0 0 0;
+}
+
+.testimonials__wrapper {
+  padding-bottom: 50px;
+}
+
+/* Map */
+
+.map__wrapper {
+  padding: 0px 0 60px 0;
+}
+
+.map__title {
+  padding: 50px 0 0 0;
+}
+
+.map__content {
+  height: 187px;
+}
+
+.pin{
+  background-image: url(assets/icons/pin320.svg);
+  width: 48px;
+  height: 57px;
+}
+
+.animal_alligator .pin{
+  background-image: url(assets/icons/pin320alligator.svg);
+}
+
+.animal_panda .pin{
+  background-image: url(assets/icons/pin320panda.svg);
+}
+
+.pin:hover{
+  background-image: url(assets/icons/pin320.svg);
+}
+
+.pin img{
+  display: none;
+}
+
+.animal_eagle {
+  top: 12%;
+  left: 4%;
+}
+
+.animal_alligator {
+  top: 12%;
+  left: 13%;
+}
+
+.animal_panda {
+  left: 68%;
+  top: 11%;
+}
+
+.description_eagle {
+  left: 10%;
+  top: 30%;
+  width: 79%;
+  height: 60%;
+}
+
+.description_img{
+  margin: -32px 0 0 17px;
+}
+
+.description img {
+  width: 79%;
+}
+
+.description__title {
+  font: 900 14px/16.41px Roboto;
+}
+
+.description__info {
+  font: 500 11px/12.89px Roboto;
+}
+
+.description__span {
+  font: 400 11px/12.89px Roboto;
+}
+
+.description__content{
+  margin: -13px 0 0 0;
+}
+
+.map-btn__wrapper {
+  padding: 19px 0 0 0;
+}
+
+/* Footer */
+
+.footer__wrapper {
+  padding: 0px 0 30px 0;
+}
+
+.footer__content {
+  height: 937px;
+  grid-template-areas:
+      'footer-block1__logo'
+      'footer-block2__menu'
+      'footer-block4__contact'
+      'footer-block5__info'
+      'footer-block3__btn';
+  grid-template-columns: 100%;
+  grid-template-rows: 8% 14% 43% 28% 7%;
+  padding-top: 50px;
+}
+
+.footer-block1__logo {
+  padding-left: 11px;
+}
+
+.footer-menu {
+  padding-top: 10px;
+  padding-left: 11px;
+}
+
+.footer-block4__contact {
+  padding: 4px 0px 0 10px;
+}
+
+.form {
+  width: 98%;
+}
+
+.check__wrapper {
+  display: flex;
+  padding: 21px 0 0 0;
+}
+
+.form__btn_wrapper {
+  padding: 15px 6px 0 0px;
+}
+
+.footer-block5__info {
+  padding: 20px 0 0 10px;
+}
+
+.footer-block3__btn {
+  padding: 0 26px 0 0;
+}
+
+.footer__line {
+  padding: 73px 0 0 10px;
+}
+
+.footer__line img {
+  width: 99%;
+}
+
+.copyright {
+  padding: 33px 0 0 11px;
+}
+
+/* Intermediate */
+
+.intermediate__title{
+  font: 900 24px/28.13px Roboto;
+  padding-top: 36px;
+}
+
+.intermediate__info{
+  padding: 0;
+  font:400 12px/14.06px Roboto;
+  width: 101%;
+  line-height: 16.9px;
+  transform: scale(0.88);
+}
+
+.intermediate__container {
+  width: 83%;
+  padding: 23px 0 0 0;
+}
+
+.intermediate__menu .intermediate__item:nth-child(n+4){
+  display: none;
+}
+
+.intermediate__menu .intermediate__item:nth-child(3){
+  margin: 0;
+}
+
+.intermediate__menu .intermediate__item:nth-child(4){
+  margin: 0 ;
+}
+
+.intermediate__range {
+  padding-top: 9px;
+  width: 223px;
+}
+
+.intermediate__number{
+  padding-left: 21px;
+}
+
+.intermediate .map__content {
+  height: 208px;
+}
+
+.intermediate .pin {
+  background-image: url(assets/icons/map-pin-320.svg);
+  width: 33.38px;
+  height: 47.14px;
+}
+
+.intermediate .pin_active {
+  background-image: url(assets/icons/map-pin-active-320.svg) !important;
+  width: 33.38px;
+  height: 47.14px;
+}
+
+.intermediate .pin img{
+  display: flex;
+  width: 65%;
+    margin-top: -4px;
+}
+
+.intermediate .animal_eagle {
+  top: 15.5%;
+  left: 8%;
+}
+
+.intermediate .animal_alligator {
+  top: 21%;
+  left: 17%;
+}
+
+.intermediate .animal_gorilla {
+  top: 32.5%;
+  left: 45%;
+}
+
+.intermediate .animal_panda {
+  left: 72.5%;
+  top: 18.5%;
+}
+
+.intermediate__wrapper {
+  padding-bottom: 59px;
+}
+
+/* Broadcast */
+
+.main {
+  padding-bottom: 429px;
+}
+
+.side-bar__wrapper {
+  height: 270px;
+}
+
+.side-bar {
+  width: 23%;
+  top: 132px;
+  height: 258px;
+}
+
+.side-bar__menu {
+  height: 204px;
+}
+
+.side-bar__item {
+  margin: 0 0 0 21px;
+}
+
+.side-bar__item_active {
+  margin: 0 0 2px 0 !important;
+}
+
+.side-bar__item img {
+  width: 75%;
+}
+
+.zoo__title {
+  font: 900 24px/28.13px Roboto;
+  padding-top: 37px;
+  padding-bottom: 18px;
+    padding-left: 40px;
+}
+
+.videos {
+  width: 85%;
+  padding-left: 32px;
+}
+
+.video__main {
+  height: 118px;
+  width: 100%;
+}
+
+.videos__small {
+  padding-top: 7px;
+}
+
+.videos__small .video__small:nth-child(3){
+  display: none;
+}
+
+.video__small {
+  height: 60px;
+  width: 48%;
+}
+
+.videos__btns {
+  padding-top: 20px;
+  margin-left: 0px;
+}
+
+.animal-description {
+  width: 85%;
+  margin: 0;
+  padding: 22px 0 0 33px;
+}
+
+.animal-description__title {
+  font: 900 14px/16.41px Roboto;
+  line-height: 32px;
+}
+
+.animal-description__info {
+  margin-left: -14px;
+  line-height: 16px;
+  transform: scale(0.88);
+  font: 400 12px/14.06px Roboto;
+  width: 115%;
+}
+
+.animal-description__btn {
+  padding-top: 8px;
+}
+
+.animal-description__btn .btn {
+  width: 90%;
+}
+
 
 }
