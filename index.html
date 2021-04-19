@@ -49,6 +49,7 @@
             <input type="checkbox" />
             <span class="slider round"></span>
           </label>
+          <span class="burger"></span>
         </div>
       </div>
     </header>
@@ -56,7 +57,11 @@
       <section class="favourite">
         <div class="wrapper favourite__wrapper">
           <div class="information">
-            <h2 class="favourite__title">Watch your favorite animal online</h2>
+            <div class="favourite__title-wrapper">
+              <h2 class="favourite__title">
+                Watch your favorite animal online
+              </h2>
+            </div>
             <div class="favourite-btn__wrapper">
               <a href="live-broadcast_panda.html" class="btn-link">
                 <button class="btn">
@@ -161,7 +166,7 @@
               voice for wildlife, we are devastated by the impact of the 2020
               Australian bushfires on precious species and their habitat.
             </p>
-            <img class="works__img" alt="" src="assets/images/works.png" />
+            <img class="works__img" alt="" src="" />
             <div class="works__range range">
               <div class="works__number number">
                 01/
@@ -365,13 +370,13 @@
               <img src="assets/images/visa.png" alt="" />
             </div>
             <div class="feed-container__item">
-              <img src="assets/images/Arrow 2.png" alt="" />
+              <img src="" alt="" class="feed-container__arrow" />
             </div>
             <div class="feed-container__item">
               <img src="assets/images/payment.png" alt="" />
             </div>
             <div class="feed-container__item">
-              <img src="assets/images/Arrow 3.png" alt="" />
+              <img src="" alt="" class="feed-container__arrow" />
             </div>
             <div class="feed-container__item">
               <img src="assets/images/panda.png" alt="" />
@@ -389,7 +394,7 @@
             <div class="testimonials-container__arrows arrows">
               <span class="arrow arrow_left"></span>
             </div>
-            <div class="testimonials-container__item">
+            <div class="testimonials-container__item person-1">
               <img alt="" src="assets/icons/person2.svg" class="person1_img" />
               <h5 class="testimonials-container__title">Nastya Sidorova</h5>
               <p class="testimonials-container__info info">
@@ -433,12 +438,13 @@
           <a name="map"></a>
           <h3 class="map__title title">Map</h3>
           <div class="map__content">
+            <img src="" alt="" class="map__map" />
             <div class="animal animal_eagle">
               <span class="pin">
                 <img src="assets/images/map-eagle.png" alt="" />
               </span>
             </div>
-            <div class="description description_eagle">
+            <div class="description description_eagle description_eagle_active">
               <div class="description_img">
                 <img src="assets/images/eagle-circle.png" alt="" />
               </div>
@@ -548,36 +554,36 @@
     <footer class="footer">
       <div class="wrapper footer__wrapper">
         <a name="contact-us"></a>
-        <div class="footer__top">
-          <div class="logo">
+        <div class="footer__content">
+          <div class="footer-block1__logo">
             <a href="index.html">
               <span class="footer__title"></span>
             </a>
           </div>
-          <ul class="footer-menu ul">
-            <li class="footer-menu__item li">
-              <a href="index.html" class="link">About</a>
-            </li>
-            <li class="footer-menu__item li">
-              <a href="live-broadcast_panda.html" class="link">Zoos</a>
-            </li>
-            <li class="footer-menu__item li">
-              <a href="map.html" class="link">Map</a>
-            </li>
-            <li class="footer-menu__item li">
-              <a
-                href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp"
-                class="link"
-                >Design</a
-              >
-            </li>
-          </ul>
-          <div class="top-btn__wrapper">
+          <div class="footer-block2__menu">
+            <ul class="footer-menu ul">
+              <li class="footer-menu__item li">
+                <a href="index.html" class="link">About</a>
+              </li>
+              <li class="footer-menu__item li">
+                <a href="live-broadcast_panda.html" class="link">Zoos</a>
+              </li>
+              <li class="footer-menu__item li">
+                <a href="map.html" class="link">Map</a>
+              </li>
+              <li class="footer-menu__item li">
+                <a
+                  href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp"
+                  class="link"
+                  >Design</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-block3__btn">
             <button class="btn btn__top">Donate for Volunteers</button>
           </div>
-        </div>
-        <div class="contact">
-          <div class="your-info contact__wrapper">
+          <div class="footer-block4__contact">
             <h4 class="contact__your-title">Contact us</h4>
             <form class="form">
               <input
@@ -619,7 +625,7 @@
               </div>
             </form>
           </div>
-          <div class="our-info contact__wrapper">
+          <div class="footer-block5__info">
             <h5 class="contact__our-title">ZOO Online Centre</h5>
             <address class="contact__address">
               132, Address District, Street<br />Open Daily 10:00 am - 5:00
