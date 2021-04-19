@@ -144,8 +144,8 @@ body {
 .item__info {
   position: absolute;
   color: white;
-  width: 185px;
-  left: 30px;
+  width: 181px;
+  left: 24px;
   top: 475px;
 }
 
@@ -160,6 +160,10 @@ body {
   font: 12px/14.06px Roboto;
 }
 
+.btn-watch{
+  margin-right: 19px;
+}
+
 .btn-watch a {
   color: #4bd8b5;
 }
@@ -170,6 +174,7 @@ body {
 }
 
 .item__btns {
+  width: 198px;
   display: flex;
 }
 
@@ -419,19 +424,26 @@ Favourite
 
 .favourite__wrapper {
   max-width: 100%;
-  padding-bottom: 107px;
+  padding-bottom: 439px;
   overflow: hidden;
+  position: relative;
+}
+
+.information{
+  position: absolute;
 }
 
 .favourite__title {
-  font: 900 89px/104.3px Roboto;
+  width: 70%;
+  letter-spacing: 3px;
+  font: 900 4.29vw/104.3px Roboto;
   color: #fefefe;
-  padding: 204px 0 0 359px;
+  padding: 209px 0 0 355px;
   width: 1145px;
 }
 
 .favourite-btn__wrapper {
-  padding: 39px 0 0 360px;
+  padding: 38px 0 0 351px;
 }
 
 .social {
@@ -443,7 +455,7 @@ Favourite
   flex-direction: column;
   position: relative;
   bottom: -407px;
-  right: 303px;
+  left: 44%;
   height: 500px;
 }
 
@@ -467,8 +479,8 @@ Favourite
   transition: 1s;
 }
 
-.gallery__item:hover .gallery-item__info {
-  top: 250px;
+.gallery__item .gallery-item__info {
+  top: 237px;
   transition: 1s;
 }
 
@@ -620,8 +632,17 @@ Favourite
   position: relative;
 }
 
+.container__item_active .pets-item__info{
+top: 217px !important;
+}
+
+.container__item .item__info{
+  left: 10px;
+    top: 342px;
+}
+
 .container__item:hover .item__info {
-  top: 350px;
+  top: 217px;
   transition: 1s;
 }
 
@@ -1301,19 +1322,62 @@ Favourite
 }
 
 .favourite__wrapper {
-  padding-bottom: 67px;
+  padding-bottom: 426px;
 }
 
 .favourite__title{
-  padding: 11%0 0 13%;
+  padding: 10.6% 0 0 12.6%;
+  width: 79%;
+    letter-spacing: 0.7px;
+  font: 900 7.29vw/104.3px Roboto;
 }
 
 .favourite-btn__wrapper {
-  padding: 39px 0 0 13%;
+  padding: 37px 0 0 12.4%;
 }
 
 .social {
-  padding: 28%0 0 13%;
+  padding: 26.8% 0 0 12.5%;
+}
+
+.gallery {
+  bottom: -431px;
+  left: 40%;
+}
+
+.gallery__container {
+  width: 1094px;
+  right: -145px;
+}
+
+.image {
+  padding-top: 178px;
+  z-index: 1;
+}
+
+.gallery__item{
+  width: 183px;
+  height: 261px;
+}
+
+.gallery__item img{
+  width: 100%;
+}
+
+.gallery__item {
+    border-radius: 8px;
+    padding-left: 3px;
+}
+.item_active {
+    width: 245px;
+    height: 352px;
+}
+
+
+.gallery__range {
+    position: absolute;
+    bottom: 14%;
+    left: 32.5%;
 }
 
 /* Works */
@@ -1376,15 +1440,22 @@ Favourite
 }
 
 .pets .arrows {
-  padding-top: 17%;
+  padding-top: 17.3%;
 }
 
 .container {
+  width: 91.5%;
+  padding-left: 2px;
   padding-bottom: 17px;
 }
 
 .container__item{
   padding-top: 32px;
+}
+
+.pets__range{
+  padding-top: 1px;
+    padding-left: 3px;
 }
 
 /* Feed */
@@ -1423,6 +1494,14 @@ Favourite
 
 .testimonials-btn__wrapper {
   padding: 26px 0 0 0;
+}
+
+.person-2 .testimonials-container__title{
+  margin-left: -5px;
+}
+
+.person-2 .testimonials-container__info{
+  margin-left: -10px;
 }
 
 /* Map */
@@ -1467,6 +1546,18 @@ Favourite
 .description{
   width: 48%;
     height: 34%;
+}
+
+.description img{
+  margin: 0px 0 0 -7px;
+}
+
+.description__title {
+  margin: -3px 0 0 22px;
+}
+
+.description__info {
+  padding: 3px 0 0 22px;
 }
 
 .description_eagle {
@@ -1787,7 +1878,43 @@ Favourite
 }
 
 .favourite__wrapper {
-  padding-bottom: 75px;
+  padding-bottom: 434px;
+}
+
+.favourite__title {
+  padding: 18.6% 0 0 3.1%;
+  width: 95%;
+  letter-spacing: 0.1px;
+  font: 902 10vw/75.3px Roboto;
+}
+
+.favourite-btn__wrapper {
+  padding: 34px 0 0 3.4%;
+}
+
+.social {
+  padding: 57.9% 0 0 3.2%;
+}
+
+.image{
+  margin-left: 0.4%;
+}
+
+.gallery {
+  bottom: -409px;
+  left: 8%;
+}
+
+.gallery__container {
+  right: -82px;
+}
+
+.gallery__item .gallery-item__info {
+  top: 235px;
+}
+
+.gallery__range {
+  left: 26.5%;
 }
 
   /* Works */
@@ -1837,8 +1964,51 @@ Favourite
 
 /* Pets */
 
+.pets__wrapper {
+  padding-bottom: 99px;
+}
+
+.pets__title{
+  padding-bottom: 34px;
+}
+
 .pets .arrows{
   display: none;
+}
+
+.container{
+  position: relative;
+  overflow: hidden;
+  width: 98%;
+  padding-left: 14px;
+  height: 336px;
+}
+
+.container .container__item:nth-child(4){
+  display: none;
+}
+
+.container__item{
+  padding: 0;
+  position: absolute;
+  width: 214px;
+  height: 301px;
+}
+
+.container__item_active .pets-item__info {
+  top: 186px !important;
+}
+
+.container__item:nth-child(2){
+  left: 245px;
+}
+
+.container__item:nth-child(3){
+  left: 475px;
+}
+
+.pets-btn__wrapper {
+  padding-top: 32px;
 }
 
 /* Feed */
@@ -2186,6 +2356,74 @@ Favourite
 
 /* Favourite */
 
+.favourite__wrapper {
+  padding-bottom: 170px;
+}
+
+.favourite{
+  background-image: url(assets/images/favourite-backg_320.png);
+}
+
+.favourite__title {
+  padding: 28.6% 0 0 3.1%;
+  width: 95%;
+  letter-spacing: 0.1px;
+  font: 902 15vw/56.3px Roboto;
+}
+
+.favourite-btn__wrapper {
+  padding: 17px 0 0 3.4%;
+}
+
+.social{
+  display: none;
+}
+
+.gallery {
+  bottom: -276px;
+  left: 0%;
+}
+
+.gallery__container {
+  width: 621px;
+  right: 435px;
+  top: 90px;
+}
+
+.gallery__item {
+  width: 113px;
+  height: 164px;
+}
+
+.gallery .item_active{
+width: 140px;
+height: 202px;
+}
+
+.gallery .item_active .gallery-item__info {
+  top: 75px;
+  left: 10px;
+}
+
+.gallery-item__info .item__title {
+  width: 138px;
+  transform: scale(0.9);
+  margin: -4px 0 -12px -8px;
+}
+
+.gallery__item .gallery-item__info {
+  top: 75px;
+  left: 10px;
+}
+
+.item__btns {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-watch {
+  margin-bottom: 8px;
+}
 /* Work */
 
 .works__wrapper {
@@ -2236,6 +2474,39 @@ Favourite
 }
 
 /* Pets */
+
+.pets__title {
+  padding-bottom: 28px;
+}
+
+.pets-container {
+  width: 98%;
+}
+
+.container {
+  padding-left: 8px;
+}
+
+.container__item:nth-child(2) {
+  left: 234px;
+}
+
+.pets__range {
+  padding-top: 0px;
+  padding-left: 0px;
+}
+
+.pets-btn__wrapper {
+  padding-top: 20px;
+}
+
+.pets__wrapper {
+  padding-bottom: 48px;
+}
+
+.container__item:hover .item__info {
+  top: 186px !important;
+}
 
 /* Feed */
 
@@ -2349,6 +2620,22 @@ Favourite
 .animal_panda {
   left: 68%;
   top: 11%;
+}
+
+.description_img {
+  margin: -32px 0 0 22px;
+}
+
+.description img {
+  width: 100% !important;
+}
+
+.description__title {
+  margin: 9px 0 7px 0px;
+}
+
+.description__info{
+  padding: 0;
 }
 
 .description_eagle {
