@@ -1197,17 +1197,19 @@ Favourite
 
 .side-bar__link_active {
   display: flex;
-  align-items: center;
   border: 6px solid white;
   border-radius: 50%;
 }
 
 .side-bar__item_active {
-  border: 5px solid transparent;
+  border: 9px solid transparent;
   background: linear-gradient(45deg, #07eee0, #df496d) border-box;
   border-radius: 50%;
   display: flex;
   align-items: center;
+  width: 160px;
+  height: 160px;
+  justify-content: center;
 }
 
 .zoo {
@@ -1352,12 +1354,17 @@ Favourite
   align-items: center;
 }
 
+.intermediate__animals{
+  width: 1057px;
+}
+
 .intermediate__menu {
   list-style-type: none;
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
   align-items: center;
-  justify-content: space-between;
-  width: 1057px;
+  overflow: hidden;
+    grid-gap: 15px;
 }
 
 .intermediate__range {
@@ -1763,25 +1770,11 @@ Favourite
   width: 100%;
 }
 
-.intermediate__link img{
-  width: 100%;
-}
 
 .intermediate__item{
   padding-right:2px ;
 }
 
-.intermediate__menu .intermediate__item:nth-child(3){
-  margin: 0px 21px 0 0;
-}
-
-.intermediate__menu .intermediate__item:nth-child(4){
-  margin: 0 23px 0px 0px;
-}
-
-.intermediate__menu .intermediate__item:nth-child(n+6){
-  display: none;
-}
 
 .intermediate__container {
   width: 78%;
@@ -1801,7 +1794,7 @@ Favourite
 }
 
 .intermediate__animals{
-  width: 83%;
+  width: 84%;
 }
 
 .intermediate__range {

@@ -91,82 +91,85 @@ scroll.forEach(sc => {
 // Carousell Watch animals
 
 const galleryContainer = document.querySelector('.gallery__container');
-const galleryItems = document.querySelectorAll('.gallery__item');
-const gC = document.querySelector('.g-c');
-const galleryGap= 42;
-gC.scrollTo(190,0);
-const galleryScrollNumber = document.querySelector('.gallery__scroll');
+if(galleryContainer){
+    const galleryItems = document.querySelectorAll('.gallery__item');
+    const gC = document.querySelector('.g-c');
+    const galleryGap= 42;
+    gC.scrollTo(190,0);
+    const galleryScrollNumber = document.querySelector('.gallery__scroll');
 
 
-function galleryRemoveActive (){
-    const active = document.querySelector('.item_active');
-    active.classList.remove('item_active');
-}
+    function galleryRemoveActive (){
+        const active = document.querySelector('.item_active');
+        active.classList.remove('item_active');
+    }
 
 
-function galleryMoveItem (ind){
-    let width = galleryItems[0].offsetWidth;
-    gC.scrollTo((width+galleryGap) * (ind-1), 0);
-}
+    function galleryMoveItem (ind){
+        let width = galleryItems[0].offsetWidth;
+        gC.scrollTo((width+galleryGap) * (ind-1), 0);
+    }
 
-function galleryGetActiveInd(){
-    for( let i = 0; i <galleryItems.length; i++ ){
-        if(galleryItems[i].classList.contains('item_active')){
-            return i;
+    function galleryGetActiveInd(){
+        for( let i = 0; i <galleryItems.length; i++ ){
+            if(galleryItems[i].classList.contains('item_active')){
+                return i;
+            }
         }
     }
-}
 
-function galleryScrollChange(ind){
-    galleryScrollNumber.value = ind;
-    let parent;
-    let output;
-    parent = galleryScrollNumber.parentElement;
-    output = parent.firstElementChild;
-    output.innerHTML = changeNumber(galleryScrollNumber.value, output);
-}
-
-galleryItems.forEach((item,ind)=>{
-    if(!item.classList.contains('gallery-circle')){
-        item.addEventListener('click', (e)=>{
-            if(!item.classList.contains('item_active')){
-                let index = galleryGetActiveInd();
-                galleryRemoveActive();
-                item.classList.add('item_active');
-                ind = ind === index ? 0 : ind;
-                galleryMoveItem(ind);
-                galleryScrollChange(ind);
-            }
-        });
+    function galleryScrollChange(ind){
+        galleryScrollNumber.value = ind;
+        let parent;
+        let output;
+        parent = galleryScrollNumber.parentElement;
+        output = parent.firstElementChild;
+        output.innerHTML = changeNumber(galleryScrollNumber.value, output);
     }
-});
 
-galleryScrollNumber.addEventListener('click',(e)=>{
-    let ind = galleryScrollNumber.value;
-    let indActive =  galleryGetActiveInd();
-    if(ind!=indActive){
-        galleryRemoveActive();
-        galleryItems[ind].classList.add('item_active');
-        galleryMoveItem(ind);
-    }
-});
+    galleryItems.forEach((item,ind)=>{
+        if(!item.classList.contains('gallery-circle')){
+            item.addEventListener('click', (e)=>{
+                if(!item.classList.contains('item_active')){
+                    let index = galleryGetActiveInd();
+                    galleryRemoveActive();
+                    item.classList.add('item_active');
+                    ind = ind === index ? 0 : ind;
+                    galleryMoveItem(ind);
+                    galleryScrollChange(ind);
+                }
+            });
+        }
+    });
 
-galleryScrollNumber.addEventListener('mousedown',()=>{
-    galleryScrollNumber.onmousemove = function (e) {
+    galleryScrollNumber.addEventListener('click',(e)=>{
         let ind = galleryScrollNumber.value;
         let indActive =  galleryGetActiveInd();
         if(ind!=indActive){
             galleryRemoveActive();
             galleryItems[ind].classList.add('item_active');
             galleryMoveItem(ind);
-            galleryScrollChange(ind);
         }
-    };
-});
+    });
 
-galleryScrollNumber.addEventListener('mouseup', () => {
-    galleryScrollNumber.onmousemove = null;
-});
+    galleryScrollNumber.addEventListener('mousedown',()=>{
+        galleryScrollNumber.onmousemove = function (e) {
+            let ind = galleryScrollNumber.value;
+            let indActive =  galleryGetActiveInd();
+            if(ind!=indActive){
+                galleryRemoveActive();
+                galleryItems[ind].classList.add('item_active');
+                galleryMoveItem(ind);
+                galleryScrollChange(ind);
+            }
+        };
+    });
+
+    galleryScrollNumber.addEventListener('mouseup', () => {
+        galleryScrollNumber.onmousemove = null;
+    });
+}
+
 
 
 // Pets
@@ -188,8 +191,7 @@ if (petsAnimals) {
                     if ((i + ind) < petsAnimals.length) {
                         let rectangle = petsAnimals[i + ind].getBoundingClientRect();
                         let cont = container.getBoundingClientRect();
-
-                        if (rectangle.right > cont.right) moveOne(ind);
+                        if (rectangle.right > (cont.right+100)) moveOne(ind);
                         classAddRemove((i + ind), i);
                         movePetsScroll(i + ind + 1);
                         return;
@@ -218,6 +220,22 @@ if (petsAnimals) {
             }
         }
     }
+
+    // let autoInterval = setInterval (()=>{
+    //     movePetsAnimals('right', 1);
+    // },2000);
+    // let autoTimeOut = null;
+
+    // const delaySliding = ()=>{
+    //     clearInterval(autoInterval);
+    //     autoInterval = null;
+
+    //     autoTimeOut = setTimeout(()=>{
+    //         autoInterval = setInterval (()=>{
+    //             movePetsAnimals('right', 1);
+    //         },2000);
+    //     },2000);
+    // }
 
     function moveDouble(sighn) {
         if (sighn > 0) {
@@ -255,6 +273,7 @@ if (petsAnimals) {
 
     petsArrows.forEach(arrow => {
         arrow.addEventListener('click', (e) => {
+            //delaySliding();
             if (arrow.classList.contains('arrow_right')) {
                 movePetsAnimals('right', 1);
             } else {
@@ -262,6 +281,7 @@ if (petsAnimals) {
             }
         });
     });
+
 
 
     function movePetsAnimalsScroll(direction, number) {
@@ -338,6 +358,8 @@ if (petsAnimals) {
     });
 
     petsScroll.addEventListener('mousedown', (e) => {
+        //clearInterval(autoInterval);
+        //autoInterval = null;
         petsScroll.onmousemove = function (e) {
             movePetsScroll(e.target.value);
             let number = +e.target.value - 1;
@@ -354,6 +376,11 @@ if (petsAnimals) {
 
     petsScroll.addEventListener('mouseup', (e) => {
         petsScroll.onmousemove = null;
+        // autoTimeOut = setTimeout(()=>{
+        //     autoInterval = setInterval (()=>{
+        //         movePetsAnimals('right', 1);
+        //     },2000);
+        // },2000);
     });
 
 
@@ -367,7 +394,7 @@ if (petsAnimals) {
 
 
 // Map
-
+let intermediateIndex = 1;
 const intermediateArrows = document.querySelectorAll('.intermediate__arrows .arrow');
 if(intermediateArrows.length){
     const intermediateAnimals = document.querySelectorAll('.intermediate__item');
@@ -376,6 +403,7 @@ if(intermediateArrows.length){
     const intermediateScroll = document.querySelector('.intermediate__range .scroll');
     const intermediatePin = document.querySelectorAll('.intermediate .map__content .animal');
     const intermediateBtn = document.querySelector('.intermediate .btn');
+    const intermediateMenu = document.querySelector('.intermediate__menu');
 
 
     function moveIntermediateAnimals(direction,ind) {
@@ -383,9 +411,14 @@ if(intermediateArrows.length){
             if (intermediateAnimals[i].classList.contains('side-bar__item_active')) {
                 if(direction==='right'){
                     if(i+ind<intermediateAnimals.length){
+                        let rect = intermediateAnimals[i+ind].getBoundingClientRect();
+                        let cont = intermediateMenu.getBoundingClientRect();
+                        if(rect.left-cont.left>600)intermediateMove(intermediateIndex++,110);
                         moveIntermediateScroll(i+ind+1);
                         intermediateAddRemoveClass(i+ind,i);
                     }else{
+                        intermediateIndex=0;
+                        intermediateMove(intermediateIndex++,110);
                         moveIntermediateScroll(ind);
                         intermediateAddRemoveClass(0,i);
                     }
@@ -393,9 +426,17 @@ if(intermediateArrows.length){
 
                 } else{
                     if(i+ind>=0){
+                        let rect = intermediateAnimals[i+ind].getBoundingClientRect();
+                        let cont = intermediateMenu.getBoundingClientRect();
+                        if(rect.left-cont.left<0){
+                            intermediateIndex--;
+                            intermediateMove(i-1,110);
+                        }
                         moveIntermediateScroll(i+ind+1);
                         intermediateAddRemoveClass(i+ind,i);
                     } else{
+                        intermediateIndex=4;
+                        intermediateMove(intermediateIndex,110);
                         moveIntermediateScroll(8);
                         intermediateAddRemoveClass(7,i);
                     }
@@ -403,6 +444,12 @@ if(intermediateArrows.length){
                 }
             }
         }
+    }
+
+
+
+    function intermediateMove(ind,width){
+        intermediateMenu.scrollTo((width+15)*ind,0);
     }
 
     function moveIntermediateScroll(ind){
