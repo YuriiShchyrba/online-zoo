@@ -90,6 +90,85 @@ scroll.forEach(sc => {
 
 // Carousell Watch animals
 
+const galleryContainer = document.querySelector('.gallery__container');
+const galleryItems = document.querySelectorAll('.gallery__item');
+const gC = document.querySelector('.g-c');
+const galleryGap= 42;
+gC.scrollTo(190,0);
+const galleryScrollNumber = document.querySelector('.gallery__scroll');
+
+
+function galleryRemoveActive (){
+    const active = document.querySelector('.item_active');
+    active.classList.remove('item_active');
+}
+
+
+function galleryMoveItem (ind){
+    let width = galleryItems[0].offsetWidth;
+    gC.scrollTo((width+galleryGap) * (ind-1), 0);
+}
+
+function galleryGetActiveInd(){
+    for( let i = 0; i <galleryItems.length; i++ ){
+        if(galleryItems[i].classList.contains('item_active')){
+            return i;
+        }
+    }
+}
+
+function galleryScrollChange(ind){
+    galleryScrollNumber.value = ind;
+    let parent;
+    let output;
+    parent = galleryScrollNumber.parentElement;
+    output = parent.firstElementChild;
+    output.innerHTML = changeNumber(galleryScrollNumber.value, output);
+}
+
+galleryItems.forEach((item,ind)=>{
+    if(!item.classList.contains('gallery-circle')){
+        item.addEventListener('click', (e)=>{
+            if(!item.classList.contains('item_active')){
+                let index = galleryGetActiveInd();
+                galleryRemoveActive();
+                item.classList.add('item_active');
+                ind = ind === index ? 0 : ind;
+                galleryMoveItem(ind);
+                galleryScrollChange(ind);
+            }
+        });
+    }
+});
+
+galleryScrollNumber.addEventListener('click',(e)=>{
+    let ind = galleryScrollNumber.value;
+    let indActive =  galleryGetActiveInd();
+    if(ind!=indActive){
+        galleryRemoveActive();
+        galleryItems[ind].classList.add('item_active');
+        galleryMoveItem(ind);
+    }
+});
+
+galleryScrollNumber.addEventListener('mousedown',()=>{
+    galleryScrollNumber.onmousemove = function (e) {
+        let ind = galleryScrollNumber.value;
+        let indActive =  galleryGetActiveInd();
+        if(ind!=indActive){
+            galleryRemoveActive();
+            galleryItems[ind].classList.add('item_active');
+            galleryMoveItem(ind);
+            galleryScrollChange(ind);
+        }
+    };
+});
+
+galleryScrollNumber.addEventListener('mouseup', () => {
+    galleryScrollNumber.onmousemove = null;
+});
+
+
 // Pets
 
 let petsAnimals = document.querySelector('.container');
@@ -469,6 +548,7 @@ const videoBtns = document.querySelectorAll('.videos__btn');
 const videoContainer = document.querySelector('.videos__small');
 const videosBlock = document.querySelectorAll('.video-block');
 let videoMain = document.querySelector('.video__main');
+const videoGap = 26;
 
 function videoRemoveActive (){
     const active = document.querySelector('.btn_active');
@@ -476,7 +556,8 @@ function videoRemoveActive (){
 }
 
 function videoMove (ind){
-    videoContainer.scrollTo((videoContainer.offsetWidth) * ind, 0);
+    console.log((videoContainer.offsetWidth) * ind);
+    videoContainer.scrollTo((videoContainer.offsetWidth+videoGap) * ind, 0);
 }
 
 videosBlock.forEach(block=>{
@@ -498,3 +579,5 @@ videoBtns.forEach((btn,ind)=>{
         videoMove(ind);
     });
 });
+
+
